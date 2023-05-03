@@ -14,7 +14,7 @@ public class CharacterBasic : MonoBehaviour
 
     private void TimeFixedGoMove(float time)
     {
-        float moveRate = time * 1f;
+        float moveRate = time * 2f;
 
         if(Input.GetAxis("Horizontal") > 0)
         {
