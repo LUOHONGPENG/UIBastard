@@ -8,5 +8,9 @@ public class GameMgr : MonoSingleton<GameMgr>
     public UIMgr uiMgr;
     public SoundMgr soundMgr;
 
-
+    public void FixedUpdate()
+    {
+        float time = Time.fixedDeltaTime;
+        levelMgr.TimeFixedGoLevel(time);
+    }
 }
