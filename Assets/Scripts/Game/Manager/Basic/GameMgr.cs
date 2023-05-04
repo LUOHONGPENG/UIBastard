@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameMgr : MonoSingleton<GameMgr>
+public partial class GameMgr : MonoSingleton<GameMgr>
 {
     public CameraFollow cameraFollow;
     public LevelMgr levelMgr;
@@ -17,10 +17,22 @@ public class GameMgr : MonoSingleton<GameMgr>
         //Init Data
         dataMgr = new DataMgr();
         dataMgr.Init();
+        //Init Input
+        InitInput();
         //Init View
         levelMgr.Init();
         uiMgr.Init();
         cameraFollow.Init(levelMgr.character.tfCharacter);
+    }
+
+    public void OnEnable()
+    {
+        EnableInput();
+    }
+
+    public void OnDisable()
+    {
+        DisableInput();
     }
 
     public void FixedUpdate()

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86776b6035e571d45954fdb224cdd188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraFollow: {fileID: 0}
   levelMgr: {fileID: 1571399858019989547}
   uiMgr: {fileID: 5750824228281530425}
   soundMgr: {fileID: 631918427652841672}
