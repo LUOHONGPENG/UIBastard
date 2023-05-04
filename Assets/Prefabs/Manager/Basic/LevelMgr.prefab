@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 4210443913650013284}
   tfMonster: {fileID: 7742920088392505579}
+  pfMonster: {fileID: 2906732759710994070, guid: 777fc797222d47749a49107e7ad05ddc,
+    type: 3}
 --- !u!1 &4771003259957632131
 GameObject:
   m_ObjectHideFlags: 0
