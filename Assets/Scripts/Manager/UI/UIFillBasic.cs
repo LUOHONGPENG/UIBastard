@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIHeartBasic : MonoBehaviour
+public class UIFillBasic : MonoBehaviour
 {
     public Image imgFill;
     public Button btnSkill;
@@ -17,6 +17,10 @@ public class UIHeartBasic : MonoBehaviour
         });
     }
 
+    public void SetFill(float fillAmount)
+    {
+        imgFill.fillAmount = fillAmount;
+    }
 
 
 }

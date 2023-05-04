@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIMgr : MonoBehaviour
+public class DataMgr
 {
-    public InterfaceUIMgr interfaceUIMgr;
+    public CharacterModel characterModel;
+
     public void Init()
     {
-        interfaceUIMgr.Init();
+        characterModel = new CharacterModel();
     }
 }

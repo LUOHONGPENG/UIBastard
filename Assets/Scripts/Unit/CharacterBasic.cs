@@ -2,15 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterBasic : MonoBehaviour
+public partial class CharacterBasic : MonoBehaviour
 {
     public Transform tfCharacter;
     public SpriteRenderer srCharacter;
+
+    public void Init()
+    {
+        InitModel();
+    }
+
+    #region Time
+    public void TimeGoCharacter(float time)
+    {
+        TimeGoRecover(time);
+    }
 
     public void TimeFixedGoCharacter(float time)
     {
         TimeFixedGoMove(time);
     }
+    #endregion
 
     private void TimeFixedGoMove(float time)
     {

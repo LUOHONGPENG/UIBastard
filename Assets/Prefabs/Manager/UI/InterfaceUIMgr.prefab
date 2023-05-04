@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 332, y: 50}
-  m_SizeDelta: {x: 600, y: 100}
+  m_AnchoredPosition: {x: 332, y: -8}
+  m_SizeDelta: {x: 600, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8023350173327013289
 MonoBehaviour:
@@ -218,8 +218,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 332, y: -50}
-  m_SizeDelta: {x: 600, y: 100}
+  m_AnchoredPosition: {x: 332, y: -84.99999}
+  m_SizeDelta: {x: 600, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9040544733105247800
 MonoBehaviour:
@@ -459,6 +459,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnSetting: {fileID: 7331925308999244203}
   btnCharacter: {fileID: 1047356809840045537}
+  tfHeart: {fileID: 7816859307037007026}
+  pfHeart: {fileID: 4639996713789399522, guid: 944b5492386a7af4e837cb930a71193a, type: 3}
+  tfEnergy: {fileID: 3087547843970362334}
+  pfEnergy: {fileID: 6079633647961992049, guid: 564e9f818262d184e81f2a605cf17d46,
+    type: 3}
 --- !u!1 &6415828382696028618
 GameObject:
   m_ObjectHideFlags: 0
