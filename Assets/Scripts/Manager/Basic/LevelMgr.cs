@@ -6,6 +6,12 @@ public class LevelMgr : MonoBehaviour
 {
     public CharacterBasic character;
 
+    public void Init()
+    {
+
+    }
+
+
     public void TimeFixedGoLevel(float time)
     {
         if (character != null)
