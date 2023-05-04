@@ -13,5 +13,17 @@ public class MonsterBasic : MonoBehaviour
 
     }
 
+    public void TurnRed()
+    {
+        StopCoroutine(IE_TurnRed());
+        StartCoroutine(IE_TurnRed());
+    }
+
+    public IEnumerator IE_TurnRed()
+    {
+        srMonster.color = Color.red;
+        yield return new WaitForSeconds(0.5f);
+        srMonster.color = Color.white;
+    }
 
 }
