@@ -10,7 +10,17 @@ public class MonsterBasic : MonoBehaviour
 
     public void Init()
     {
+        curHP = 100f;
+    }
 
+    public void GetHurt(float damage)
+    {
+        curHP -= damage;
+        if (curHP <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+        TurnRed();
     }
 
     public void TurnRed()
