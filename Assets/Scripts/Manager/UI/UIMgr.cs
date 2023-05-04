@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class UIMgr : MonoBehaviour
 {
+    public InterfaceUIMgr interfaceUIMgr;
+    public void Init()
+    {
 
+    }
 }
