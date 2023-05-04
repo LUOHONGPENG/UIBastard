@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelMgr : MonoBehaviour
 {
     public CharacterBasic character;
+    public Transform tfMonster;
 
     public void Init()
     {

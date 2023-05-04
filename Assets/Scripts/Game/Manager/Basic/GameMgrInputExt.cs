@@ -36,9 +36,14 @@ public partial class GameMgr
     }
     private void Normal_performed(InputAction.CallbackContext obj)
     {
-        Vector2 position = touchPositionAction.ReadValue<Vector2>();
-        Debug.Log(position);
-        EventCenter.Instance.EventTrigger("NormalAttack", null);
+        Vector2 screenPosition = touchPositionAction.ReadValue<Vector2>();
+        Ray ray = Camera.main.ScreenPointToRay(screenPosition);
+        Vector3 groundPosition;
+        if(Physics.Raycast(ray,out RaycastHit hitData,LayerMask.GetMask("Ground"))) 
+        {
+            groundPosition = hitData.point;
+            EventCenter.Instance.EventTrigger("NormalAttack", groundPosition);
+        }
     }
 
     private void Special_performed(InputAction.CallbackContext obj)
