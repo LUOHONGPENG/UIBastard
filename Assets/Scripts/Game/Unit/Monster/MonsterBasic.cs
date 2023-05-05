@@ -16,6 +16,9 @@ public class MonsterBasic : MonoBehaviour
     public void GetHurt(float damage)
     {
         curHP -= damage;
+
+        GameMgr.Instance.uiMgr.effectUIMgr.InitDamageText(Mathf.Abs(damage), GameMgr.Instance.UICamera.WorldToScreenPoint(transform.position));
+
         if (curHP <= 0)
         {
             Destroy(this.gameObject);

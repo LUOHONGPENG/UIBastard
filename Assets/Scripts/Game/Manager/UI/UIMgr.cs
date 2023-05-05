@@ -7,6 +7,8 @@ public class UIMgr : MonoBehaviour
 {
     public GameObject objSkillBlue;
     public InterfaceUIMgr interfaceUIMgr;
+    public EffectUIMgr effectUIMgr;
+
     public void Init()
     {
         interfaceUIMgr.Init();

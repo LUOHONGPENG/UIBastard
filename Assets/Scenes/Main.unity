@@ -645,6 +645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3563913577756278681, guid: edc3dc4948b4da245bdd09330546ff8a,
         type: 3}
+      propertyPath: UICamera
+      value: 
+      objectReference: {fileID: 2080847299}
+    - target: {fileID: 3563913577756278681, guid: edc3dc4948b4da245bdd09330546ff8a,
+        type: 3}
       propertyPath: cameraFollow
       value: 
       objectReference: {fileID: 330585548}
@@ -704,6 +709,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6233313694604434335, guid: edc3dc4948b4da245bdd09330546ff8a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -454.99994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933817518477300484, guid: edc3dc4948b4da245bdd09330546ff8a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -454.99994
