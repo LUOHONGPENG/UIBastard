@@ -82,15 +82,26 @@ public partial class CharacterBasic
     {
         if(stateType == CharacterStateType.SkillReady || stateType == CharacterStateType.SkillRange)
         {
-            stateType = CharacterStateType.Normal;
-            GameMgr.Instance.isSkillReady = false;
+            SkillOff();
         }
         else if(stateType == CharacterStateType.Normal)
         {
-            stateType = CharacterStateType.SkillReady;
-            GameMgr.Instance.isSkillReady = true;
+            SkillOn();
         }
     }
+
+    private void SkillOn()
+    {
+        stateType = CharacterStateType.SkillReady;
+        GameMgr.Instance.isSkillReady = true;
+    }
+
+    private void SkillOff()
+    {
+        stateType = CharacterStateType.Normal;
+        GameMgr.Instance.isSkillReady = false;
+    }
+
 
     private void SkillExecuteEvent(object arg0)
     {
@@ -113,6 +124,7 @@ public partial class CharacterBasic
         {
             currentEP -= 2f;
             Heal(3f);
+            SkillOff();
         }
     }
 
@@ -138,6 +150,7 @@ public partial class CharacterBasic
                     }
                 }
             }
+            SkillOff();
         }
     }
 }
