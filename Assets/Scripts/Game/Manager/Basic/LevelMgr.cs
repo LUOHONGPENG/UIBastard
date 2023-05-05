@@ -8,6 +8,7 @@ public class LevelMgr : MonoBehaviour
     public Transform tfMonster;
     public GameObject pfMonster;
 
+
     public void Init()
     {
         character.Init();
@@ -35,11 +36,5 @@ public class LevelMgr : MonoBehaviour
         }
     }
 
-    public void TimeGoLevel(float time)
-    {
-        if(character != null)
-        {
-            character.TimeGoCharacter(time);
-        }
-    }
+
 }

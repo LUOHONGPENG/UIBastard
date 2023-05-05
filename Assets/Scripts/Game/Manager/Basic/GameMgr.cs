@@ -10,6 +10,8 @@ public partial class GameMgr : MonoSingleton<GameMgr>
     public SoundMgr soundMgr;
     public DataMgr dataMgr;
 
+    public bool isSkillReady = false;
+    public bool isTimeStopMon = false;
 
     public override void Init()
     {
@@ -38,12 +40,22 @@ public partial class GameMgr : MonoSingleton<GameMgr>
     public void FixedUpdate()
     {
         float time = Time.fixedDeltaTime;
+        if (isTimeStopMon)
+        {
+            return;
+        }
         levelMgr.TimeFixedGoLevel(time);
     }
 
     public void Update()
     {
-        float time = Time.deltaTime;
-        levelMgr.TimeGoLevel(time);
+        if (isSkillReady)
+        {
+            isTimeStopMon = true;
+        }
+        else
+        {
+            isTimeStopMon = false;
+        }
     }
 }

@@ -8,12 +8,12 @@ public class UIFillBasic : MonoBehaviour
     public Image imgFill;
     public Button btnSkill;
 
-    public void Init()
+    public void Init(int skillID)
     {
         btnSkill.onClick.RemoveAllListeners();
         btnSkill.onClick.AddListener(delegate ()
         {
-
+            EventCenter.Instance.EventTrigger("SkillExecute", skillID);
         });
     }
 

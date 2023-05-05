@@ -36,6 +36,7 @@ public class InterfaceUIMgr : MonoBehaviour
         {
             GameObject objHeart = GameObject.Instantiate(pfHeart, tfHeart);
             UIFillBasic itemHeart = objHeart.GetComponent<UIFillBasic>();
+            itemHeart.Init(1001);
             listHeart.Add(itemHeart);
         }
         //EP
@@ -45,6 +46,7 @@ public class InterfaceUIMgr : MonoBehaviour
         {
             GameObject objEnergy = GameObject.Instantiate(pfEnergy, tfEnergy);
             UIFillBasic itemEnergy = objEnergy.GetComponent<UIFillBasic>();
+            itemEnergy.Init(1002);
             listEnergy.Add(itemEnergy);
         }
     }

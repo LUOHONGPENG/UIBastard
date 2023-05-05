@@ -34,6 +34,7 @@ public partial class GameMgr
         specialAttackAction.performed += Special_performed;
         skillReadyAttackAction.performed += SkillReady_performed;
     }
+
     private void Normal_performed(InputAction.CallbackContext obj)
     {
         Vector2 screenPosition = touchPositionAction.ReadValue<Vector2>();

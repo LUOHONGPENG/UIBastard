@@ -15,7 +15,9 @@ public partial class CharacterBasic : MonoBehaviour
         EventCenter.Instance.AddEventListener("NormalAttack", NormalAttackEvent);
         EventCenter.Instance.AddEventListener("SpecialAttack", SpecialAttackEvent);
         EventCenter.Instance.AddEventListener("SkillReady", SkillReadyEvent);
+        EventCenter.Instance.AddEventListener("SkillExecute", SkillExecuteEvent);
 
+        stateType = CharacterStateType.Normal;
     }
 
     public void OnDestroy()
@@ -23,18 +25,16 @@ public partial class CharacterBasic : MonoBehaviour
         EventCenter.Instance.RemoveEventListener("NormalAttack", NormalAttackEvent);
         EventCenter.Instance.RemoveEventListener("SpecialAttack", SpecialAttackEvent);
         EventCenter.Instance.RemoveEventListener("SkillReady", SkillReadyEvent);
+        EventCenter.Instance.RemoveEventListener("SkillExecute", SkillExecuteEvent);
     }
 
 
     #region Time
-    public void TimeGoCharacter(float time)
-    {
-        TimeGoRecover(time);
-    }
 
     public void TimeFixedGoCharacter(float time)
     {
         TimeFixedGoMove(time);
+        TimeGoRecover(time);
     }
     #endregion
 
