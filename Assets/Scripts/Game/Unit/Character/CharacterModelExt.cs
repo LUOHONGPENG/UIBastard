@@ -72,7 +72,7 @@ public partial class CharacterBasic
     {
         if(currentEP < EPLimit)
         {
-            currentEP += time * 0.25f;
+            currentEP += time * 0.5f;
         }
     }
 }
