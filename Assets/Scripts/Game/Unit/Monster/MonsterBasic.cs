@@ -16,15 +16,9 @@ public class MonsterBasic : MonoBehaviour
     public void GetHurt(float damage)
     {
         curHP -= damage;
-
-        //Vector3 viewPos = GameMgr.Instance.UICamera.WorldToViewportPoint(transform.position);
-        Debug.Log("Pos" + transform.position);
-        Vector2 screenPos = RectTransformUtility.WorldToScreenPoint(GameMgr.Instance.MapCamera, transform.position);
-        Vector2 targetPos = new Vector2(screenPos.x - Screen.width / 2, screenPos.y - Screen.height / 2);
-
-        Debug.Log(targetPos);
-
-        GameMgr.Instance.uiMgr.effectUIMgr.InitDamageText(Mathf.Abs(damage), targetPos);
+        //Pass the coordinate of the 3D object
+        Vector3 objPos = transform.position;
+        GameMgr.Instance.uiMgr.effectUIMgr.InitDamageText(Mathf.Abs(damage), objPos);
 
         if (curHP <= 0)
         {
