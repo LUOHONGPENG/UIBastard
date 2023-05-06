@@ -17,8 +17,7 @@ public class MonsterBasic : MonoBehaviour
     {
         curHP -= damage;
         //Pass the coordinate of the 3D object
-        Vector3 objPos = transform.position;
-        GameMgr.Instance.uiMgr.effectUIMgr.InitDamageText(Mathf.Abs(damage), objPos);
+        GameMgr.Instance.uiMgr.effectUIMgr.InitDamageText(Mathf.Abs(damage), this.transform.position);
 
         if (curHP <= 0)
         {

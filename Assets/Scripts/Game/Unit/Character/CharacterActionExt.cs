@@ -16,7 +16,6 @@ public partial class CharacterBasic
         }
     }
 
-
     public void NormalAttackEvent(object arg0)
     {
         if(stateType == CharacterStateType.Normal)
@@ -58,21 +57,24 @@ public partial class CharacterBasic
         }
     }
     private void SpecialAttackEvent(object arg0)
-    {        
-        //View
-        GameObject objEffect = GameObject.Instantiate((GameObject)Resources.Load("Effect/EffectInsult"), tfEffect);
-        EffectBasic itemEffect = objEffect.GetComponent<EffectBasic>();
-        itemEffect.Init(0.4f);
-        //DetectMonster
-        Collider[] hits = Physics.OverlapSphere(tfCharacter.position, 1f);
-        foreach (var hit in hits)
+    {
+        if (stateType == CharacterStateType.Normal)
         {
-            if (hit.tag == "Monster")
+            //View
+            GameObject objEffect = GameObject.Instantiate((GameObject)Resources.Load("Effect/EffectInsult"), tfEffect);
+            EffectBasic itemEffect = objEffect.GetComponent<EffectBasic>();
+            itemEffect.Init(0.4f);
+            //DetectMonster
+            Collider[] hits = Physics.OverlapSphere(tfCharacter.position, 1f);
+            foreach (var hit in hits)
             {
-                MonsterBasic mon = hit.GetComponent<MonsterBasic>();
-                if (mon != null)
+                if (hit.tag == "Monster")
                 {
-                    mon.GetHurt(10f);
+                    MonsterBasic mon = hit.GetComponent<MonsterBasic>();
+                    if (mon != null)
+                    {
+                        mon.GetHurt(10f);
+                    }
                 }
             }
         }
