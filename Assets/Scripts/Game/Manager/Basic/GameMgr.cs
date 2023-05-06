@@ -5,6 +5,7 @@ using UnityEngine;
 public partial class GameMgr : MonoSingleton<GameMgr>
 {
     public CameraFollow cameraFollow;
+    public Camera MapCamera;
     public Camera UICamera;
     public LevelMgr levelMgr;
     public UIMgr uiMgr;

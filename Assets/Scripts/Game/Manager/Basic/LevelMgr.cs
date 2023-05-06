@@ -8,7 +8,6 @@ public class LevelMgr : MonoBehaviour
     public Transform tfMonster;
     public GameObject pfMonster;
 
-
     public void Init()
     {
         character.Init();
@@ -35,6 +34,4 @@ public class LevelMgr : MonoBehaviour
             character.TimeFixedGoCharacter(time);
         }
     }
-
-
 }
