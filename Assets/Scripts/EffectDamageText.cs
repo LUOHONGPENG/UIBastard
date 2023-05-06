@@ -16,13 +16,7 @@ public class EffectDamageText : MonoBehaviour
     {
         //Text Info
         txDamage.text = ((int)(info)).ToString();
-        //RandomPos
-        float randomX = Random.Range(-0.5f, 0.5f);
-        float randomY = Random.Range(-0.5f, 0.5f);
-        transform.localPosition = new Vector3(pos.x + randomX, pos.y + randomY, 0);
-
-        //transform.position = new Vector3(pos.x + randomX, pos.y + randomY,0);
-        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
+        transform.localPosition = new Vector3(pos.x, pos.y, 0);
         //Animation
         seq = DOTween.Sequence();
         seq.Append(txDamage.transform.DOLocalMoveY(200F, 2.5F));
