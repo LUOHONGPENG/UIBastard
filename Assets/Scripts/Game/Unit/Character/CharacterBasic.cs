@@ -5,6 +5,7 @@ using UnityEngine;
 
 public partial class CharacterBasic : MonoBehaviour
 {
+    [Header("Basic")]
     public Transform tfCharacter;
     public SpriteRenderer srCharacter;
 
@@ -16,6 +17,9 @@ public partial class CharacterBasic : MonoBehaviour
         EventCenter.Instance.AddEventListener("SpecialAttack", SpecialAttackEvent);
         EventCenter.Instance.AddEventListener("SkillReady", SkillReadyEvent);
         EventCenter.Instance.AddEventListener("SkillExecute", SkillExecuteEvent);
+        EventCenter.Instance.AddEventListener("ShowSkillTip", ShowSkillTip);
+        EventCenter.Instance.AddEventListener("HideSkillTip", HideSkillTip);
+
 
         stateType = CharacterStateType.Normal;
     }
@@ -26,11 +30,13 @@ public partial class CharacterBasic : MonoBehaviour
         EventCenter.Instance.RemoveEventListener("SpecialAttack", SpecialAttackEvent);
         EventCenter.Instance.RemoveEventListener("SkillReady", SkillReadyEvent);
         EventCenter.Instance.RemoveEventListener("SkillExecute", SkillExecuteEvent);
+        EventCenter.Instance.RemoveEventListener("ShowSkillTip", ShowSkillTip);
+        EventCenter.Instance.RemoveEventListener("HideSkillTip", HideSkillTip);
+
     }
 
 
     #region Time
-
     public void TimeFixedGoCharacter(float time)
     {
         TimeFixedGoMove(time);
@@ -62,4 +68,6 @@ public partial class CharacterBasic : MonoBehaviour
             tfCharacter.transform.Translate(Vector3.back * moveRate);
         }
     }
+
+
 }

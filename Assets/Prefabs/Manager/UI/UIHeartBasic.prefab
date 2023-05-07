@@ -87,6 +87,8 @@ GameObject:
   - component: {fileID: 6859129139926409873}
   - component: {fileID: 2857643483031992770}
   - component: {fileID: 7526351776357269667}
+  - component: {fileID: 7456342490460792126}
+  - component: {fileID: 7701555057358095093}
   m_Layer: 5
   m_Name: UIHeartBasic
   m_TagString: Untagged
@@ -137,7 +139,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imgFill: {fileID: 892990741085420940}
+--- !u!114 &7456342490460792126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4639996713789399522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1bd9174bfee43468c9896dccca4ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverBasic: {fileID: 7701555057358095093}
   btnSkill: {fileID: 8067173204026855764}
+--- !u!114 &7701555057358095093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4639996713789399522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220b84ef9fba94c42a329998fa9154a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4798211256335390717
 GameObject:
   m_ObjectHideFlags: 0

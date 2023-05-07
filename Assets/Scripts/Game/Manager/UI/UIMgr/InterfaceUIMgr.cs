@@ -35,9 +35,10 @@ public class InterfaceUIMgr : MonoBehaviour
         for (int i = 0; i < characterModel.HPLimit; i++)
         {
             GameObject objHeart = GameObject.Instantiate(pfHeart, tfHeart);
-            UIFillBasic itemHeart = objHeart.GetComponent<UIFillBasic>();
-            itemHeart.Init(1001);
-            listHeart.Add(itemHeart);
+            UIFillBasic itemFill = objHeart.GetComponent<UIFillBasic>();
+            listHeart.Add(itemFill);
+            UISkillTipBasic itemSkill = objHeart.GetComponent<UISkillTipBasic>();
+            itemSkill.Init(1001);
         }
         //EP
         listEnergy.Clear();
@@ -45,9 +46,10 @@ public class InterfaceUIMgr : MonoBehaviour
         for (int i = 0; i < characterModel.EPLimit; i++)
         {
             GameObject objEnergy = GameObject.Instantiate(pfEnergy, tfEnergy);
-            UIFillBasic itemEnergy = objEnergy.GetComponent<UIFillBasic>();
-            itemEnergy.Init(1002);
-            listEnergy.Add(itemEnergy);
+            UIFillBasic itemFill = objEnergy.GetComponent<UIFillBasic>();
+            listEnergy.Add(itemFill);
+            UISkillTipBasic itemSkill = objEnergy.GetComponent<UISkillTipBasic>();
+            itemSkill.Init(1002);
         }
     }
 

@@ -44,6 +44,12 @@ public partial class GameMgr
         playerInput.Disable();
     }
 
+    private void Movement_performed(InputAction.CallbackContext obj)
+    {
+        Vector2 valueMove = obj.ReadValue<Vector2>();
+        movementVec = valueMove;
+    }
+
     private void Normal_performed(InputAction.CallbackContext obj)
     {
         Vector2 screenPosition = touchPositionAction.ReadValue<Vector2>();
@@ -68,11 +74,7 @@ public partial class GameMgr
 
 
 
-    private void Movement_performed(InputAction.CallbackContext obj)
-    {
-        Vector2 valueMove = obj.ReadValue<Vector2>();
-        movementVec = valueMove;
-    }
+
 
 
 }

@@ -102,6 +102,7 @@ public partial class CharacterBasic
     {
         stateType = CharacterStateType.Normal;
         GameMgr.Instance.isSkillReady = false;
+        HideSkillTip(null);
     }
 
 
@@ -118,6 +119,8 @@ public partial class CharacterBasic
                 ExecuteSkill1002();
                 break;
         }
+
+
     }
 
     private void ExecuteSkill1001()

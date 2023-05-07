@@ -87,6 +87,8 @@ GameObject:
   - component: {fileID: 5407454700980463618}
   - component: {fileID: 3716531140060263249}
   - component: {fileID: 8955794794631334448}
+  - component: {fileID: 6755118513353150651}
+  - component: {fileID: 6743673226137448761}
   m_Layer: 5
   m_Name: UIEnergyBasic
   m_TagString: Untagged
@@ -137,7 +139,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imgFill: {fileID: 1756171458376578847}
+--- !u!114 &6755118513353150651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079633647961992049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1bd9174bfee43468c9896dccca4ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverBasic: {fileID: 6743673226137448761}
   btnSkill: {fileID: 8921628334446533575}
+--- !u!114 &6743673226137448761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079633647961992049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220b84ef9fba94c42a329998fa9154a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6245662883402358126
 GameObject:
   m_ObjectHideFlags: 0

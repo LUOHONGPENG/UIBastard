@@ -6,7 +6,7 @@ using UnityEngine;
 public partial class CharacterBasic
 {
     private CharacterModel characterModel;
-
+    [Header("Data")]
     public float currentHP;
     public float currentEP;
 
