@@ -23,6 +23,9 @@ public partial class CharacterBasic
                 case 1002:
                     imgIcon.sprite = listSpIcon[1];
                     break;
+                default:
+                    imgIcon.sprite = listSpIcon[0];
+                    break;
             }
         }
     }
